@@ -1,3 +1,10 @@
+# Personal Details
+## Live View:
+https://anthonytruongg.github.io/CV-Project/
+
+My First React Project!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
