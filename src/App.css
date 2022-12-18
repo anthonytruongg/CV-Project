@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,20 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.heading {
+  font-size: 72px;
+  color: rgb(133, 82, 221);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.card:hover {
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.2);
+  transition: 0.5s;
 }
