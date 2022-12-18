@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/anthonytruongg/CV-Project.git/static/css/main.073c9b0a.css",
-    "main.js": "/anthonytruongg/CV-Project.git/static/js/main.93fa1586.js",
-    "static/js/787.34a20539.chunk.js": "/anthonytruongg/CV-Project.git/static/js/787.34a20539.chunk.js",
-    "static/media/logo.svg": "/anthonytruongg/CV-Project.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/anthonytruongg/CV-Project.git/static/css/main.ee04341a.css",
+    "main.js": "/anthonytruongg/CV-Project.git/static/js/main.a02d90ae.js",
     "index.html": "/anthonytruongg/CV-Project.git/index.html",
-    "main.073c9b0a.css.map": "/anthonytruongg/CV-Project.git/static/css/main.073c9b0a.css.map",
-    "main.93fa1586.js.map": "/anthonytruongg/CV-Project.git/static/js/main.93fa1586.js.map",
-    "787.34a20539.chunk.js.map": "/anthonytruongg/CV-Project.git/static/js/787.34a20539.chunk.js.map"
+    "main.ee04341a.css.map": "/anthonytruongg/CV-Project.git/static/css/main.ee04341a.css.map",
+    "main.a02d90ae.js.map": "/anthonytruongg/CV-Project.git/static/js/main.a02d90ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.93fa1586.js"
+    "static/css/main.ee04341a.css",
+    "static/js/main.a02d90ae.js"
   ]
 }
