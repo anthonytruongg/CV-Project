@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
-import './Modal.css'
+import './modal.css'
 
 function Modal(props) {
 
@@ -13,11 +13,9 @@ function Modal(props) {
 
     const highlightModalOn = () => {
         setIsHover(true);
-        console.log('on')
     }
     const highlightModalOff = () => {
         setIsHover(false);
-        console.log('off')
     }
 
     const highlight = {
@@ -30,36 +28,62 @@ function Modal(props) {
         color: isHover ? 'white' : 'purple',
     }
 
-  return (
-    <div>
-    <h2 
-    style={highlight} 
-    onClick={toggleModal} 
-    onMouseEnter={highlightModalOn}
-    onMouseLeave={highlightModalOff}
-    >
-        
-        Preview
-        
-    </h2>
-        {modal && (
-        <div className="modal">
-            <div className="overlay" onClick={toggleModal}>
-                <div className="modal-content">
-                    <h2>{props.name}</h2>
-                    <h3>{props.first} {props.last}</h3>
-                    <h2>{props.email}</h2>
-                    <h3>{props.emailInfo}</h3>
-                    <h2>{props.phone}</h2>
-                    <h3>{props.phoneInfo}</h3>
-                    <button className='close-modal' onClick={toggleModal}>X</button>
-                </div>
-            </div>
+    // when the user enters general information, 
+    // the modal will display the information
+    const general = props.general;
+    if (general)
+    {
+        return (
+            <div className="stack">
+            <h2 
+            style={highlight} 
+            onClick={toggleModal} 
+            onMouseEnter={highlightModalOn}
+            onMouseLeave={highlightModalOff}
+            >
+                Preview
+            </h2>
+            <h3>{props.name}</h3>
+            <h4 className='modalText'>{props.first} {props.last}</h4>
+            <h3>{props.email}</h3>
+            <h4 className='modalText'>{props.emailInfo}</h4>
+            <h3>{props.phone}</h3>
+            <h4 className='modalText'>{props.phoneInfo}</h4>
         </div>
-        )}
-    </div>
-
-  )
+        )
+    }
+    
+    // when the user enters educational information,
+    // the modal will display the information
+    const educational = props.educational;
+    if (educational)
+    {
+        return(
+            <div className="stack">
+            <h2 
+            style={highlight} 
+            onClick={toggleModal} 
+            onMouseEnter={highlightModalOn}
+            onMouseLeave={highlightModalOff}
+            >
+                
+                Preview
+                
+            </h2>
+            <h3>{props.school}</h3>
+            <h4 className='modalText'>{props.schoolInfo}</h4>
+            <h3>{props.degree}</h3>
+            <h4 className='modalText'>{props.degreeInfo}</h4>
+            <h3>{props.fieldOfStudy}</h3>
+            <h4 className='modalText'>{props.fieldOfStudyInfo}</h4>
+            <h3>{props.startYear}</h3>
+            <h4 className='modalText'>{props.startYearInfo}</h4>
+            <h3>{props.endYear}</h3>
+            <h4 className='modalText'>{props.endYearInfo}</h4>
+        </div>
+        )
+    }
+  
 }
 
 export default Modal

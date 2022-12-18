@@ -1,53 +1,7 @@
 import React, { Component } from 'react'
 import Modal from './Modal'
-const stack = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh'
-}
-const generalInfo = {
-    fontSize: '50px',
-    color: 'purple'
-}
-
-const label = {
-    fontSize: '40px',
-    color: 'grey',
-    fontWeight: 'bold',
-    margin: '10px 0',
-    padding: '5px'
-}
-
-const formInput = {
-    width: '300px',
-    height: '30px',
-    margin: '10px 0',
-    padding: '5px',
-    borderRadius: '10px',
-    border: '2px solid #ccc',
-    backgroundColor: 'white',
-}
-
-const submitButton = {
-    width: '100px',
-    height: '40px',
-    margin: '10px 0',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-    fontSize: '20px',
-    color: 'purple',
-}
-
-const card = {
-    width: '300px',
-    height: '300px',
-    padding: '50px',
-    borderRadius: '10px',
-    backgroundColor: 'bisque',
-}
-
+import './input.css'
+import Submit from './Submit'
 
 class GeneralInformation extends Component {
 
@@ -59,15 +13,20 @@ class GeneralInformation extends Component {
         lastName: '',
         email: '',
         phone: '',
-        
+        general: false,
       }
     }
 
     handleSubmit = (event) => {
-       
         event.preventDefault()
         console.log(this.state.firstName)
         console.log(this.state.lastName)
+        console.log(this.state.email)
+        console.log(this.state.phone)
+        console.log("submit from general information")
+        this.setState({
+            general: true,
+        })
     }
 
     firstNameChange = (event) => {
@@ -98,12 +57,13 @@ class GeneralInformation extends Component {
     const { firstName, lastName, email, phone } = this.state
 
     return (
+        <div className="">
         <form onSubmit={this.handleSubmit}>
-            <div style={stack}>
+            <div className='stack'>
                 <h1 className='heading'>InstaResume.io</h1>
-                <h2 style={generalInfo}>General Information</h2>
+                <h2 className='generalInfo'>General Information</h2>
                 <input 
-                style={formInput} 
+                className='formInput'
                 type="text" 
                 value={firstName} 
                 placeholder='First Name'
@@ -111,7 +71,7 @@ class GeneralInformation extends Component {
                 />
 
                 <input 
-                style={formInput}
+                className='formInput'
                 type="text" 
                 value={lastName} 
                 placeholder='Last Name'
@@ -119,7 +79,7 @@ class GeneralInformation extends Component {
                 />
 
                 <input
-                style={formInput}
+                className='formInput'
                 type="email"
                 value={email}
                 placeholder='Email'
@@ -127,17 +87,17 @@ class GeneralInformation extends Component {
                 />
 
                 <input
-                style={formInput}
+                className='formInput'
                 type="number"
                 value={phone}
-                placeholder='Phone (xxx-xxx-xxxx)'
+                placeholder='Phone'
                 onChange={this.phoneChange}
                 />
 
-                <button style={submitButton} type='submit'>Submit</button>
+                <button className='submitButton' type='submit'>Done</button>
             </div>
             
-            <div style={stack}>
+            <div className='stack'>
                 <Modal 
                 name='Name:'
                 first={firstName}
@@ -146,10 +106,11 @@ class GeneralInformation extends Component {
                 emailInfo={email}
                 phone='Phone:'
                 phoneInfo={phone}
+                general={this.state.general}
                 />
             </div>
-
         </form>
+        </div>
      
     )
   }
