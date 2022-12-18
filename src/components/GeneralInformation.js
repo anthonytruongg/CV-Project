@@ -110,7 +110,7 @@ class GeneralInformation extends Component {
                 />
             </div>
         </form>
-        </div>
+    </div>
      
     )
   }
