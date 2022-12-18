@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/anthonytruongg/CV-Project.git/static/css/main.ee04341a.css",
-    "main.js": "/anthonytruongg/CV-Project.git/static/js/main.a02d90ae.js",
-    "index.html": "/anthonytruongg/CV-Project.git/index.html",
-    "main.ee04341a.css.map": "/anthonytruongg/CV-Project.git/static/css/main.ee04341a.css.map",
-    "main.a02d90ae.js.map": "/anthonytruongg/CV-Project.git/static/js/main.a02d90ae.js.map"
+    "main.css": "/anthonytruongg/CV-Project/static/css/main.ee04341a.css",
+    "main.js": "/anthonytruongg/CV-Project/static/js/main.a02d90ae.js",
+    "index.html": "/anthonytruongg/CV-Project/index.html",
+    "main.ee04341a.css.map": "/anthonytruongg/CV-Project/static/css/main.ee04341a.css.map",
+    "main.a02d90ae.js.map": "/anthonytruongg/CV-Project/static/js/main.a02d90ae.js.map"
   },
   "entrypoints": [
     "static/css/main.ee04341a.css",
