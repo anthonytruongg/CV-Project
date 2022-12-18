@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Modal from './Modal'
 const stack = {
     display: 'flex',
     flexDirection: 'column',
@@ -46,15 +46,11 @@ const card = {
     padding: '50px',
     borderRadius: '10px',
     backgroundColor: 'bisque',
-    "&:hover": {
-        backgroundColor: 'lightgrey'
-    },
-    "&:focus": {
-        backgroundColor: 'lightgreen'
-    },
 }
 
+
 class GeneralInformation extends Component {
+
     constructor(props) {
       super(props)
     
@@ -98,16 +94,13 @@ class GeneralInformation extends Component {
         })
     }
 
-
-
-
   render() {
     const { firstName, lastName, email, phone } = this.state
-    return (
 
+    return (
         <form onSubmit={this.handleSubmit}>
             <div style={stack}>
-                <h1 className='heading'>InstaResume</h1>
+                <h1 className='heading'>InstaResume.io</h1>
                 <h2 style={generalInfo}>General Information</h2>
                 <input 
                 style={formInput} 
@@ -145,15 +138,17 @@ class GeneralInformation extends Component {
             </div>
             
             <div style={stack}>
-            <h1 style={generalInfo}>Preview</h1>
-
-                <div style={card} className='card'>
-                    <h2>Name: {firstName} {lastName}</h2>
-                    <h2>Email: {email}</h2>
-                    <h2>Phone: {phone}</h2>
-                </div>
-               
+                <Modal 
+                name='Name:'
+                first={firstName}
+                last={lastName}
+                email='Email:'
+                emailInfo={email}
+                phone='Phone:'
+                phoneInfo={phone}
+                />
             </div>
+
         </form>
      
     )
