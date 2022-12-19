@@ -7,7 +7,7 @@ import Submit from './Submit'
 
 function HomePage() {
   return (
-    <div>
+    <div className='text-center'>
         <GeneralInformation />
         <Educational />
     </div>

@@ -25,12 +25,6 @@ class Educational extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state.school)
-        console.log(this.state.degree)
-        console.log(this.state.fieldOfStudy)
-        console.log(this.state.startYear)
-        console.log(this.state.endYear)
-        console.log("submit from educational")
         this.setState({
             educational: true,
         })
@@ -72,10 +66,13 @@ class Educational extends Component {
     return (
         <div className="">
             <form onSubmit={this.handleSubmit}>
-                <div className="stack">
-                    <h2 className="generalInfo">Education</h2>
+            <div className='flex flex-col'>
+                    <h2 className="text-5xl font-semibold text-fuchsia-300 my-5">Education</h2>
+
+                <div className='flex flex-col justify-self-center items-center'>
+
                     <input 
-                    className='formInput'
+                    className='p-2 my-4 rounded-lg border-2 w-80 hover:border-purple-500/50'
                     type="text" 
                     value={school} 
                     placeholder='School'
@@ -83,7 +80,7 @@ class Educational extends Component {
                     />
 
                     <input 
-                    className='formInput'
+                    className='p-2 my-4 rounded-lg border-2 w-80 hover:border-purple-500/50'
                     type="text" 
                     value={degree} 
                     placeholder='Degree'
@@ -91,35 +88,40 @@ class Educational extends Component {
                     />
 
                     <input
-                    className='formInput'
+                    className='p-2 my-4 rounded-lg border-2 w-80 hover:border-purple-500/50'
                     type="text"
                     value={fieldOfStudy}
                     placeholder='Field of Study'
                     onChange={this.fieldOfStudyChange}
                     />
 
-                    <label style={label}>Start Date</label>
+                    <label className='text-2xl font-semibold text-fuchsia-300 my-5'>Start Date</label>
                     <input
-                    className='formInput'
+                    className='p-2 my-4 rounded-lg border-2 hover:border-purple-500/50'
                     type="date"
                     value={startYear}
                     placeholder='Start Date'
                     onChange={this.startYearChange}
                     />
 
-                    <label style={label}>End Date</label>
+                    <label className='text-2xl font-semibold text-fuchsia-300 my-5'>End Date</label>
                     <input
-                    className='formInput'
+                    className='p-2 my-4 rounded-lg border-2 hover:border-purple-500/50'
                     type="date"
                     value={endYear}
                     placeholder='Graduation Date'
                     onChange={this.endYearChange}
                     />
 
-                    <button className='submitButton' type='submit'>Done</button>
+                    <button 
+                    className='p-2.5 my-4 rounded-full border-2 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 
+                    focus:outline-none focus:ring focus:ring-violet-300 text-white
+                    transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'
+                    type='submit'>Save Changes</button>               
+                 </div>
 
                     
-                </div>
+            </div>
 
                 <div className="stack">
                 <Modal

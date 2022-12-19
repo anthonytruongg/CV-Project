@@ -1,7 +1,7 @@
-.heading {
+/* .heading {
   font-size: 72px;
   color: rgb(133, 82, 221);
-}
+} */
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -9,15 +9,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-input[type=text], input[type=number], input[type=email], input[type=date] {
+/* input[type=text], input[type=number], input[type=email], input[type=date] {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   font-size: 20px;
-}
-.card:hover {
+} */
+/* .card:hover {
   box-shadow: 0 10px 14px 0 rgba(0,0,0,0.2);
   transition: 0.5s;
-}
+} */
 
 

@@ -59,42 +59,50 @@ class GeneralInformation extends Component {
     return (
         <div className="">
         <form onSubmit={this.handleSubmit}>
-            <div className='stack'>
-                <h1 className='heading'>InstaResume.io</h1>
-                <h2 className='generalInfo'>General Information</h2>
-                <input 
-                className='formInput'
-                type="text" 
-                value={firstName} 
-                placeholder='First Name'
-                onChange={this.firstNameChange}
-                />
+            <div className='flex flex-col'>
+                <h1 className='text-7xl text-purple-500 font-bold my-5'>InstaResume.io</h1>
+                <h2 className='text-5xl font-semibold text-fuchsia-300 my-5'>General Information</h2>
 
-                <input 
-                className='formInput'
-                type="text" 
-                value={lastName} 
-                placeholder='Last Name'
-                onChange={this.lastNameChange}
-                />
+                <div className='flex flex-col justify-self-center items-center'>
+                    <input 
+                    className='p-2 my-4 rounded-lg border-2 w-80 hover:border-purple-500/50'
+                    type="text" 
+                    value={firstName} 
+                    placeholder='First Name'
+                    onChange={this.firstNameChange}
+                    />
 
-                <input
-                className='formInput'
-                type="email"
-                value={email}
-                placeholder='Email'
-                onChange={this.emailChange}
-                />
+                    <input 
+                    className='p-2 my-4 rounded-lg border-2 w-80 hover:border-purple-500/50'
+                    type="text" 
+                    value={lastName} 
+                    placeholder='Last Name'
+                    onChange={this.lastNameChange}
+                    />
 
-                <input
-                className='formInput'
-                type="number"
-                value={phone}
-                placeholder='Phone'
-                onChange={this.phoneChange}
-                />
+                    <input
+                    className='p-2 my-4 rounded-lg border-2 w-80 hover:border-purple-500/50'
+                    type="email"
+                    value={email}
+                    placeholder='Email'
+                    onChange={this.emailChange}
+                    />
 
-                <button className='submitButton' type='submit'>Done</button>
+                    <input
+                    className='p-2 my-4 rounded-lg border-2 hover:border-purple-500/50'
+                    type="number"
+                    value={phone}
+                    placeholder='Phone'
+                    onChange={this.phoneChange}
+                    />
+
+                    <button 
+                    className='p-2.5 my-4 rounded-full border-2 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 
+                    focus:outline-none focus:ring focus:ring-violet-300 text-white
+                    transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'
+                    type='submit'>Save Changes</button>
+                </div>
+              
             </div>
             
             <div className='stack'>
