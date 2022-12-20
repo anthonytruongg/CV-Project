@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import React from 'react'
 import './Modal.css'
 
 function Modal(props) {
-
-    const [modal, setModal] = useState(false);
-
 
     // when the user enters general information, 
     // the modal will display the information
@@ -57,6 +53,32 @@ function Modal(props) {
             <h4 className=''>{props.startYearInfo}</h4>
             <h3 className='text-2xl font-semibold text-fuchsia-300 my-5'>{props.endYear}</h3>
             <h4 className=''>{props.endYearInfo}</h4>
+        </div>
+        )
+    }
+
+    const experience = props.experience;
+    if (experience)
+    {
+        return(
+            <div className="flex flex-col justify-items-center items-center p-20">
+            <h2 
+            className='text-5xl font-semibold text-fuchsia-300' 
+            >
+                
+                Preview
+                
+            </h2>
+            <h3 className='text-2xl font-semibold text-fuchsia-300 my-5'>{props.company}</h3>
+            <h4 className=''>{props.companyInfo}</h4>
+            <h3 className='text-2xl font-semibold text-fuchsia-300 my-5'>{props.position}</h3>
+            <h4 className=''>{props.positionInfo}</h4>
+            <h3 className='text-2xl font-semibold text-fuchsia-300 my-5'>{props.description}</h3>
+            <h4 className=''>{props.descriptionInfo}</h4>
+            <h3 className='text-2xl font-semibold text-fuchsia-300 my-5'>{props.startDate}</h3>
+            <h4 className=''>{props.startDateInfo}</h4>
+            <h3 className='text-2xl font-semibold text-fuchsia-300 my-5'>{props.endDate}</h3>
+            <h4 className=''>{props.endDateInfo}</h4>
         </div>
         )
     }
